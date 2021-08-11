@@ -92,7 +92,7 @@ background-color:green;
   height: 400px;
   animation-name: fly, cloudsize,cloudfall ;
   animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 4s; 
+  animation-delay: 4s, 3s; 
   animation-timing-function: ease, ease ;
   animation-iteration-count: 1, 1,infinite;
   animation-direction: normal;
