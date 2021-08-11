@@ -1,0 +1,266 @@
+*{
+  padding: 0;
+  box-sizing: block;
+  margin: 0;
+}
+.preload {
+  width:100%;
+  height:100%;
+  position: fixed;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: skycolor 3s infinite;
+  animation-direction: alternate;
+
+}
+
+#main{
+background-color:green;
+}
+
+
+.preload h1{
+  opacity:100% ;
+  position: absolute;
+  top:10%;
+  animation: makevisible 2s ease;
+}
+
+
+.cloud1{
+  height: 400px;
+  animation-name: fly, cloudsize,cloudfall ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 4s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
+  top:65%;
+  right:50;
+}
+
+
+.cloud2{
+  height: 350px;
+  animation-name: fly, cloudsize, drop ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 5s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, infinite;
+  animation-direction: alternate;
+  position: relative;
+  animation-fill-mode: forwards;
+  top:55%;
+  right:40;
+} 
+
+.cloud3{
+  height: 300px;
+  animation-name: fly, cloudsize,cloudfall ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 4s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
+  top:15%;
+  left:20px;
+} 
+
+
+.cloud5{
+  height: 400px;
+  animation-name: fly, cloudsize,cloudfall ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 4s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
+  
+  top:25%;
+  right:30;
+} 
+
+.cloud4{
+  height: 400px;
+  animation-name: fly, cloudsize,cloudfall ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 4s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
+  top: 0;
+  right:50;
+}
+
+.cloud5{
+  height: 300px;
+  animation-name: fly, cloudsize,cloudfall ;
+  animation-duration: 0s, 5s,4s;
+  animation-delay: 4s, 4s; 
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
+  
+  top:25%;
+  left:30;
+} 
+
+
+
+#elevator{
+  
+  height: 500px;
+  animation-name: rotate, fly, elevatorsize, descend ;
+  animation-duration: 1s, 1s, 2s,4s;
+  animation-delay: 0s, 3s, 5s, 8s, 12s; 
+  animation-timing-function: ease, ease, ease, ease ;
+  animation-iteration-count: 1, 3, 1, infinite;
+  animation-direction: alternate;
+  position: absolute;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes rotate{ 
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/*opens intro doors*/
+@keyframes ascend
+{
+  
+
+  from
+  {
+    transform: translateY(0%)
+  }
+
+  to
+  {
+    transform: translateY(-200%)
+  }
+
+}
+
+@keyframes descend
+{
+  
+
+  from
+  {
+    transform: translateY(0%)
+  }
+
+  to
+  {
+    transform: translateY(-20%)
+  }
+}
+
+@keyframes fly
+{ 
+  0%, 100%
+  
+  {
+    transform: translateY(0px);
+  }
+50%
+  {
+    transform: translateY(-80px);
+  }
+}
+
+@keyframes skycolor
+{
+  from
+  {
+     background-color: rgb(80, 203, 180);
+  }
+
+  to
+  {
+    background-color: rgb(6, 20, 65);
+  }
+}
+
+@keyframes drop
+{
+  from
+  {
+    transform: translateY(0%)
+  }
+
+  to
+  {
+    transform: translateY(50%)
+  }
+}
+
+@keyframes elevatorsize
+{
+  from
+  {
+   height:500px;
+  }
+
+  to
+  {
+    height:200px;
+  }
+}
+
+@keyframes cloudsize
+{
+  from
+  {
+   height:100%;
+  }
+
+  to
+  {
+    height:50%;
+  }
+}
+
+@keyframes cloudfall
+{
+  from
+  {
+    transform: translateY(-450%)
+  }
+
+  to
+  {
+    transform: translateY(450%)
+  }
+}
+
+@keyframes makevisible
+{
+  from
+  {
+    opacity: 100%;
+  }
+
+  to
+  {
+    transform: 0%;
+  }
+}
+
+
+
