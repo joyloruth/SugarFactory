@@ -5,30 +5,367 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="style.css" rel="stylesheet" type="text/css" />
+
+    
+    <!--********GOOGLE FONTS ********************--> 
+      <link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+    
+    <!--******** FAVICON ********************--> 
+      <link rel="icon"   type="image/png"   href="images/logos/w.png" />
+
+      <title>FETCH Candy Factory</title>
   </head>
   
   <body>
-    <div class = "preload">
+   
+   <!--<div class = "preload">
      
-      
       <h1>You have won a golden ticket!</h1>
-      <img class = "c1oud1" src = "images/cloud.png" alt = "cloud" ></img>
-      <img class = "cloud2" src = "images/cloud.png" alt = "candy" > 
-      <img class = "cloud3" src = "images/cloud.png" alt = "candy" >
-      <img src = "images/elevator.png" alt = "elevator" id = "elevator"></img>
-      <img class = "cloud4" src = "images/cloud.png" alt = "cloud" >
-      <img class = "cloud5" src = "images/cloud.png" alt = "candy" >
-      <img class = "cloud6" src = "images/cloud.png" alt = "candy" >
+      <img class = "cloud1" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+      <img class = "cloud2" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+      <img class = "cloud3" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+      <img src = "images/preloader/elevator.png" alt = "elevator" id = "elevator"></img>
+      <img class = "fire" src = "images/preloader/fire.png" alt = "cloud" ></img>
+      <img class = "cloud4" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+      <img class = "cloud5" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+      <img class = "cloud6" src = "images/preloader/cloud.png" alt = "cloud" ></img>
+    </div> -->
+
+
+    
+
+     <div class="sidenav">
+    <br><br>
+      <center>
+        <img src="images/logos/w.png" id = "sidelogo" alt="vaultmenu" style="width:110px;">
+      <br></br>
+        <a href="#dinnerMenu">MENU</a>
+        <a href="#about">ABOUT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#contact">CONTACT</a>
+      </center>
+    <br></br>
     </div>
-
-
-    <section id = "main">
-
-      <img src = "egg.jpg" alt = "egg">
-
-    </section>
+    <div class = "vault">
       
+
     </div>
+
+
+
+
+<section id = "main">
+
+<div id = "scene">
+  <div id = "walker"></div>
+  <div id = "tank">
+   
+    
+  </div> 
+</div>
+
+
+
+
+<!--
+
+<div class = "scene">
+  <div class = "container">
+    <img src="images/header/mountain.png" class = "mountain"  style="width:400px; height:350px;" >
+    <img src="images/header/mountain.png" class = "mountain2"  style="width:400px; height:350px;" >
+
+
+
+   <img src="images/header/boat.png" class = "mountain2"  style="width:200px; height:50px;" >
+
+
+  </div>
+</div> -->
+ 
+
+
+
+<!--******** DINNER MENU  ********************--> 
+  <div class = "dinnerMenu">
+
+      <div class="container">
+
+        <div class="title mt-4 mb-0">FETCH Dinner Menu</div>
+
+          <hr class="mt-2 mb-5">
+          <div class="row text-center text-lg-start">
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1>Jumbo Shrimp Cocktail</h1><h2>23</h2>
+                <p> Jumbo fried shrimp, cocktail sauce </p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1>Bacon Avocado Burger<h2>26<h2></h1>
+                <p>8oz classic beef burger, gouda cheese, pickled onions, slices of avocado</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1>Lobster Mac & Cheese</h1><h2>31</h2>
+                <p> Maine lobster, mascarpone, breadcrumbs topped with fresh grated parmasan<p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <h1>Parmesan Truffle Fries<h2>29<h2></h1>
+                  <p> Seasoned fried seasoned with our signature truffle oil and topped with fresh parmasan cheese.</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1>Mushroom Spaghetti</h1> <h2>29</h2>
+                  <p>Wild mushroom, snow peas tomato, parmesan</p>
+                  <p>Add Jumbo Shrimp<p> <h2>+21</h2>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1> Tartare Trio Treat</h1><h2>20</h2>
+                <p>Salmon, tuna, wasabi creme fraiche</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1> Smoked Salmon Roll</h1><h2>20</h2>
+                <p>cream cheese, cucumber, avocado roll</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1> Carnival Cake</h1><h2>20</h2>
+                <p>Topped with blueberry compote, maple syrup</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1> French Toast</h1><h2>20</h2>
+                <p>Topped with blueberry compote, maple syrup</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1>Fetch Cake</h1><h2>31</h2>
+                <p> FETCH signature dessert consisting of salted peanut caramel, torched meringuen<p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+              <h1> Raspberry Sorbet</h1><h2>18</h2>
+                <p>Fresh sorbet topped with mint leaf</p>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <h1> Pistachio Cream</h1><h2>16</h2>
+                  <p>Topped with fresh sweetened fruit compote.</p>
+            </div>
+          
+          </div>
+          </div>
+      </div>
+
+      <!--******** GALLERY  ********************--> 
+
+<section id = "gallery">
+`
+<div class="container">
+
+  <div class="title mt-4 mb-0">FETCH GALLERY</div>
+
+  <hr class="mt-2 mb-4">
+
+  <div class="row text-center text-lg-start">
+
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-3 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/mocha.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-3 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/jar.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-3 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/reese.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/choc.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#"class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail"  src="images/foodgallery/stack.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/choc.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/reese.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/reese.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/mocha.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/jar.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/macaroon.jpeg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-3 col-md-4 col-6">
+      <a href="#" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" src="images/foodgallery/stack.jpeg" alt="">
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+</section>
+
+
+<section id = "about">
+  <div class="row">
+    <div class="colright">
+      <br></br>
+      FETCH Seafood Restaurant & Bar is a one-stop-shop for cuisine and cocktails, providing something for everyone in seamless transitions from daytime brunch to evening dining, and exciting nightlife. With our signature, open kitchen and breathtaking views FETCH is sure to provide a memorable experience.
+    </div>
+    <div class="colleft">
+      <img src="images/foodgallery/gummy.jpg" alt="logo" style="width: 75px;">
+    </div>
+
+  </div>
+</section>
+
+
+
+<!--******** FOOTER MENU  ********************--> 
+<section id = "footermenu">
+<footer class="page-footer font-small indigo">
+
+  
+  <div class="container  text-md-left">
+    <div class="row">
+
+      <img src="images/foodgallery/gummy.jpg" id = "logo" alt="logo" style="width:300px;">
+
+      <div class="col-md-3 mx-auto">
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">FETCH a Reservation</h5>
+        <ul class="list-unstyled">
+          <li>
+            Phone: 1-(800)-456-6789
+          </li>
+          <li>
+            Email: reservations@fetch.com
+          </li>
+        </ul>
+
+
+
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">TIMING</h5>
+
+
+        <ul class="list-unstyled">
+          <li>
+            We are currently limiting dining experiences to 90 minutes.
+          </li>
+          <li>
+            Thank you in advance for understanding.
+          </li>
+          <li>
+            Please contact our Events team if you are interested in an extended experience.
+          </li>
+  
+        </ul>
+      </div>
+
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-3 mx-auto">
+
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">FETCH The Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            1234 Melorose Blvd
+          </li>
+          <li>
+            Los Angeles, CA, 34521
+          </li>
+        </ul>
+
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">FETCH HOURS</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            Open Weekdays
+          </li>
+          <li>
+             4:30 PM - 11:00 PM
+          </li>
+          <br></br>
+           <li>
+            Saturday & Sunday 
+          </li>
+          <li>
+            2:00 PM - 1:00 AM
+          </li>
+          
+        </ul>
+      </div>
+
+      <hr class="clearfix w-100 d-md-none">
+      <div class="col-md-3 mx-auto">
+
+        
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+
+        <!-- Links -->
+        
+
+      </div>
+      
+</div>
+  </div>
+ 
+</section>
+
+
+<section id =  "copyright">
+  <div class="copyrights"> Joy LoRuth © 2021 Copyright:
+    <a href="joyloruth.com"> joyloruth.com</a>
+  </div>
+  
+
+</section>
+ </div>
+
 
 
 

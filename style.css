@@ -1,9 +1,134 @@
 *{
   padding: 0;
-  box-sizing: block;
+  box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
-.preload {
+
+
+#walkerbg
+{
+  height:100vh;
+  width:100%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.57), 
+      rgba(229, 216, 244, 0.892)
+    ), url('images/tank/floor.png');
+  
+ 
+}
+
+#walker{
+  
+  background: url('manwalking.png');
+ 
+  width:184px;
+  height:325px;
+  animation: walk 1s steps(4) infinite, forward 305s infinite;
+  position: absolute;
+  top:180px;
+ 
+}
+
+
+#tank{
+   background: linear-gradient(
+      rgba(255, 255, 255, 0.091), 
+      rgba(217, 216, 244, 0.139)
+    ), url('images/tank/tankwater.jpg');
+  background-size: cover;
+  height:80%;
+  
+
+}
+
+@keyframes walk{
+  0%
+  {
+    background-position:0px;
+  }
+  100%
+  {
+    background-position: 1472px;
+  }
+}
+
+@keyframes forward{
+  0%{
+    transform: translateX(-20px);
+  }
+
+  100%{
+    transform: translateX(1200px);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes tilt40{
+  100%{
+    transform: rotate(40deg);
+  }
+ 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scene
+{
+  height:100vh;
+  background: linear-gradient(
+      rgba(149, 12, 187, 0.57), 
+      rgba(56, 0, 119, 0.892)
+    ), url('images/header/mount.png');
+
+   background-repeat: repeat-x;
+   position: relative;
+   vertical-align: bottom;
+
+  
+   
+}
+
+
+
+
+  
+  
+
+/*PRELOADER*/
+/*.preload {
   width:100%;
   height:100%;
   position: fixed;
@@ -11,58 +136,57 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: skycolor 3s infinite;
-  animation-direction: alternate;
-
+  animation-name: skycolor, end, fadetoblack ;
+  animation-duration: 5s, 1s,2s;
+  animation-delay: 0s, 13s,15s; 
+  animation-timing-function: ease, ease,ease ;
+  animation-iteration-count: 3,1,1;
+  z-index: 999;
 }
-
-#main{
-background-color:green;
-}
-
 
 .preload h1{
   opacity:100% ;
   position: absolute;
   top:10%;
-  animation: makevisible 2s ease;
-}
+  animation: namesize 5s ease-in-out;
+  animation-delay: 6s; 
+  font-size:  0px;
+  
+} 
 
 
 .cloud1{
-  height: 400px;
-  animation-name: fly, cloudsize,cloudfall ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 4s; 
+  height: 380px;
+  animation-name: fly, cloudsize,cloudfall, end;
+  animation-duration: 0s, 4s, 2s;
+  animation-delay: 1s, 4s,12s; 
   animation-timing-function: ease, ease ;
-  animation-iteration-count: 1, 1,infinite;
+  animation-iteration-count: 3, 1,infinite;
   animation-direction: normal;
   position: relative;
   animation-fill-mode: forwards;
-  top:65%;
-  right:50;
+  top:15%;
+  right:80px;
+  
 }
-
-
 .cloud2{
-  height: 350px;
-  animation-name: fly, cloudsize, drop ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 5s, 4s; 
+  height: 345px;
+  animation-name: fly, cloudsize, cloudfall,end;
+  animation-duration: 0s, 5s,2s, 1s;
+  animation-delay: 0s, 3s, 4s, 12s; 
   animation-timing-function: ease, ease ;
-  animation-iteration-count: 1, infinite;
-  animation-direction: alternate;
+  animation-iteration-count: 1, 1, infinite;
   position: relative;
   animation-fill-mode: forwards;
-  top:55%;
+  top:5%;
   right:40;
+ 
 } 
-
-.cloud3{
-  height: 300px;
-  animation-name: fly, cloudsize,cloudfall ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 4s; 
+.cloud6{
+  height: 275px;
+  animation-name: fly, cloudsize,cloudfall,end ;
+  animation-duration: 1s, 5s,4s;
+  animation-delay: 0s, 1s; 
   animation-timing-function: ease, ease ;
   animation-iteration-count: 1, 1,infinite;
   animation-direction: normal;
@@ -71,15 +195,13 @@ background-color:green;
   top:15%;
   left:20px;
 } 
-
-
 .cloud5{
   height: 400px;
-  animation-name: fly, cloudsize,cloudfall ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 4s; 
+  animation-name: fly, cloudsize,cloudfall,end ;
+  animation-duration: 0s, 5s,3s;
+  animation-delay: 0s, 4s; 
   animation-timing-function: ease, ease ;
-  animation-iteration-count: 1, 1,infinite;
+  animation-iteration-count: 1, 1,25, 1;
   animation-direction: normal;
   position: relative;
   animation-fill-mode: forwards;
@@ -87,53 +209,377 @@ background-color:green;
   top:25%;
   right:30;
 } 
-
-.cloud4{
-  height: 400px;
-  animation-name: fly, cloudsize,cloudfall ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 3s; 
+.cloud3{
+  height: 430px;
+  animation-name: fly, cloudsize,cloudfall,end ;
+  animation-duration: 0s, 1s,5s;
+  animation-delay: 0s, 3s; 
   animation-timing-function: ease, ease ;
-  animation-iteration-count: 1, 1,infinite;
-  animation-direction: normal;
-  position: relative;
-  animation-fill-mode: forwards;
-  top: 0;
-  right:50;
-}
-
-.cloud5{
-  height: 300px;
-  animation-name: fly, cloudsize,cloudfall ;
-  animation-duration: 0s, 5s,4s;
-  animation-delay: 4s, 4s; 
-  animation-timing-function: ease, ease ;
-  animation-iteration-count: 1, 1,infinite;
+  animation-iteration-count: 1, 1,25,end;
   animation-direction: normal;
   position: relative;
   animation-fill-mode: forwards;
   
+  top: 0;
+  right:50;
+  z-index: -1;
+}
+.cloud4{
+  height: 300px;
+  animation-name: fly, cloudsize,cloudfall, end ;
+  animation-duration: 0s, 1s,2s;
+  animation-delay: 0s, 7s;
+  animation-timing-function: ease, ease ;
+  animation-iteration-count: 1, 1,infinite;
+  animation-direction: normal;
+  position: relative;
+  animation-fill-mode: forwards;
   top:25%;
-  left:30;
+  left:50;
 } 
-
 
 
 #elevator{
   
   height: 500px;
-  animation-name: rotate, fly, elevatorsize, descend ;
-  animation-duration: 1s, 1s, 2s,4s;
-  animation-delay: 0s, 3s, 5s, 8s, 12s; 
+  animation-name: rotate, fly, elevatorsize, drop,elevatorsizebig,end;
+  animation-duration: 1s, 3s, 2s,.5s, 2s,2s;
+  animation-delay: 0s, 1s, 5s, 8s, 12s, 13s,1s; 
   animation-timing-function: ease, ease, ease, ease ;
-  animation-iteration-count: 1, 3, 1, infinite;
+  animation-iteration-count: 1, 1, 1, 45, 1;
   animation-direction: alternate;
   position: absolute;
   animation-fill-mode: forwards;
+  
 
 }
 
-@keyframes rotate{ 
+.fire{
+
+  height: 1px;
+  animation-name: makevisible,rotate,end;
+  animation-duration:2s,.4s,1s;
+  animation-delay: 8s, 12s; 
+  animation-timing-function: ease ;
+  animation-iteration-count:normal,25,1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  position: relative;
+  top: 160px;
+  z-index: -1;
+  
+
+} */
+
+
+
+
+
+
+.sidenav {
+  height: 100%;
+  width: 230px; 
+  z-index: 1;
+  top: 0; 
+  left: 0;
+  overflow: hidden;
+  background: 
+    linear-gradient(
+      rgba(81, 8, 198, 0.721), 
+      rgba(56, 0, 119, 0.871)
+    ), url('images/backgrounds/vaultdoor.jpg');
+  
+  padding-top: 20px;
+  border-color: rgba(209, 211, 211, 0.918);
+  box-shadow: 5px 1px 3.5px rgba(0, 0, 0, 0.651);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-name: sidenavposition;
+  animation-duration: 1s;
+  animation-delay: 15s; 
+  animation-timing-function: ease;
+  animation-iteration-count: 1s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  
+}
+
+.sidenav a{
+  padding: 15px 8px 6px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(255, 248, 232);
+  display: block;
+  font-family: "Special Elite";
+  transition: 3s  all;
+  background-color:rgba(101, 44, 1, 0.31);
+  box-shadow: 5px 1px 3.5px rgba(0, 0, 0, 0.651);
+  border: 5px;
+  border-bottom: black;
+  width:100%;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-image: url('images/backgrounds/vaultdoor.jpg');
+}
+
+
+
+
+
+
+/* Key Frames */
+
+/*
+.vault {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0; 
+  
+  background: 
+    linear-gradient(
+      rgba(81, 8, 198, 0.721), 
+      rgba(56, 0, 119, 0.871)
+    ), url('images/backgrounds/vaultdoor.jpg');
+  background-position: center;
+  display: flex;
+  align-items:  center;
+  justify-content: center;
+  margin-left: 230px;
+  -webkit-animation:openDoor 3s linear ;
+  -moz-animation:  openDoor 3s linear ;
+  animation: openDoor 3s linear;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+} */
+
+
+
+
+
+
+
+.sidenav a{
+  padding: 15px 8px 6px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(255, 248, 232);
+  display: block;
+  font-family: "Special Elite";
+  transition: 3s  all;
+   background: 
+    linear-gradient(
+      rgba(97, 218, 16, 0.714), 
+      rgba(16, 119, 0, 0.666)
+    ), url('images/backgrounds/vaultdoor.jpg');
+  box-shadow: 5px 1px 3.5px rgba(0, 0, 0, 0.651);
+  border: 5px;
+  border-bottom: black;
+  width:100%;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+.sidenav a:hover{
+  padding: 15px 8px 6px 2px;
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(255, 206, 83);
+  display: block;
+  overflow: hidden;
+  transform: translate(30%);
+  box-shadow: 5px 1px 3.5px rgba(0, 0, 0, 0.651);
+  background-image: url('images/backgrounds/vaultdoor.jpg');
+
+} 
+
+/*
+#sidelogo{
+  
+  
+  height:auto;
+  animation-delay: 30s;
+  -webkit-animation: spin 1s linear 3;
+  -moz-animation:  spin 1s linear 3;
+  animation: spin 1s linear 3;
+  
+}
+
+#sidelogo:hover{
+
+  background-color: rgb(80, 80, 80); 
+  
+}*/
+
+
+#main {
+ margin-left: 230px;
+
+}
+
+
+/*
+.navbar { 
+  width:90%;
+  background-image: linear-gradient(to right,  white,#e7e7e7);
+  box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.651);
+  font-size: 20px;
+  border-bottom: 1px;
+  border-left: 0px;
+  border-right: 0px;
+  border-style: outset;
+  border-color: rgba(180, 190, 188, 0.918);
+  margin: auto;
+  z-index: -1;
+}
+
+.menu{
+  color:black;
+  font-size: 15px;
+  font-family: cambria;
+  padding: 5px;
+}
+
+.title
+{
+  color: rgb(82, 59, 0);
+  font-size: 30px;
+  margin: auto;
+  text-align: center;
+  font-family: "Special Elite";
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Special Elite";
+}
+
+p {
+  font-size: 15px;
+  color: black;
+  font-family: "Special Elite";
+}
+
+h2 {
+  font-size:14px;
+  color:rgb(114, 65, 0);
+  font-weight: bold;
+  font-family: "Special Elite";
+} */
+
+.dinnerMenu {
+  background-image: url('images/backgrounds/paper.jpg');
+  padding:10px;
+  border: 20px;
+  border-color:black;
+  box-shadow: 5px 5px 2.5px rgba(0, 0, 0, 0.651);
+  background-attachment: fixed;
+  z-index:-1;
+}
+
+#gallery {
+  padding: 10px;
+  background: 
+    linear-gradient(
+      rgba(114, 89, 66, 0.906), 
+      rgba(255, 255, 255, 0.45)
+    ), url('images/backgrounds/bg.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+
+
+#about {
+  padding:10px;
+  margin:auto;
+  background-attachment: fixed;
+  align-content: center;
+}
+
+#about .colleft{
+
+  color:rgb(255, 255, 255);
+  padding: 10px;
+  align-content: center;
+  text-align: center;
+  width: 45%;
+  margin:auto;
+  
+}
+
+#about .colright {
+  color:rgb(0, 0, 0);
+  padding: 10px;
+  align-content: center;
+  text-align: center;
+  width: 55%;
+  margin: auto;
+}
+
+
+#footermenu {
+  background-color: white;
+  background-attachment: fixed;
+  font-family: "Special Elite";
+  color: rgb(101, 101, 101);
+  margin:auto;
+  background: cover;
+  align-content: center;
+}
+
+
+#copyright {
+   padding:10px;
+   background-color: rgb(29, 27, 23);
+}
+
+/*copyright footer*/
+.copyrights{
+   color: rgb(163, 146, 105);
+   font-family: "Special Elite";
+   text-align: right;
+}
+
+/*opens intro doors*/
+@keyframes openDoor
+{
+  from
+  {
+    left:0;
+  }
+
+  to
+  {
+    left: 82%;
+  }
+}
+
+@keyframes spin{
+  100%{-webkit-transform: rotate(360deg);}
+  
+}
+
+/*Key frames*/
+@keyframes sidenavposition
+{
+  from
+  {
+     position: relative;;
+  }
+
+  to
+  {
+    position: fixed;
+  }
+}
+
+@keyframes rotate
+{ 
   100%{
     transform: rotate(360deg);
   }
@@ -180,7 +626,7 @@ background-color:green;
   }
 50%
   {
-    transform: translateY(-80px);
+    transform: translateY(-600px);
   }
 }
 
@@ -188,12 +634,12 @@ background-color:green;
 {
   from
   {
-     background-color: rgb(80, 203, 180);
+     background-color: rgb(151, 210, 214);
   }
 
   to
   {
-    background-color: rgb(6, 20, 65);
+    background-color: rgb(7, 103, 193);
   }
 }
 
@@ -206,7 +652,7 @@ background-color:green;
 
   to
   {
-    transform: translateY(50%)
+    transform: translateY(20%)
   }
 }
 
@@ -223,16 +669,29 @@ background-color:green;
   }
 }
 
-@keyframes cloudsize
+@keyframes elevatorsizebig
 {
   from
   {
-   height:100%;
+   height:200px;
   }
 
   to
   {
-    height:50%;
+    height:2400px;
+  }
+}
+
+@keyframes cloudsize
+{
+  from
+  {
+   height:75%;
+  }
+
+  to
+  {
+    height:15%;
   }
 }
 
@@ -240,12 +699,12 @@ background-color:green;
 {
   from
   {
-    transform: translateY(-450%)
+    transform: translateY(-800%)
   }
 
   to
   {
-    transform: translateY(450%)
+    transform: translateY(800%)
   }
 }
 
@@ -253,14 +712,70 @@ background-color:green;
 {
   from
   {
-    opacity: 100%;
+    height: 0%;
   }
 
   to
   {
-    transform: 0%;
+    height:15%;
   }
 }
 
+@keyframes namesize
+{
+  from
+  {
+    font-size: 0px;
+  }
+
+  to
+  {
+    font-size: 40px;
+  }
+}
+
+@keyframes end
+{
+  from
+  {
+    visibility: visible;
+  }
+  to
+  {
+    visibility: hidden;
+  }
+}
+
+@keyframes fadetoblack
+{
+  from
+  {
+     background-color: rgb(106, 29, 169);
+  }
+
+  to
+  {
+    background-color: rgb(1, 3, 4);
+  }
+}
+
+
+
+@media screen and (max-height: 450px) 
+{
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .sidenav {width:175px; }
+}
+
+@media screen and (max-height: 450px) {
+  .main {padding-top: 15px;}
+  .main{font-size: 50%;}
+}
 
 
